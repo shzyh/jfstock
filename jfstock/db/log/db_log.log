@@ -1,0 +1,11 @@
+2019-04-23 16:09:07,792 - WARNING - query database exception:Packet sequence number wrong - got 110 expected 1
+2019-04-23 16:10:11,822 - WARNING - query database exception:(0, '')
+2019-04-23 16:10:36,489 - WARNING - query database exception:(0, '')
+2019-04-23 16:10:39,424 - WARNING - query database exception:(0, '')
+2019-04-23 16:12:52,934 - WARNING - query database exception:(0, '')
+2019-04-23 16:15:02,474 - WARNING - query database exception:(0, '')
+2019-04-23 16:15:28,858 - WARNING - query database exception:(0, '')
+2019-04-23 16:29:29,084 - WARNING - query database exception:Packet sequence number wrong - got 118 expected 1
+2019-04-23 16:29:37,341 - WARNING - query database exception:(0, '')
+2019-04-23 16:29:54,996 - WARNING - query database exception:(0, '')
+2019-04-23 16:35:14,723 - WARNING - query database exception:(0, '')

@@ -2,7 +2,7 @@
 # @Author: jiangfeng
 # @Date:   2018-11-22 16:48:39
 # @Last Modified by:   jiangfeng
-# @Last Modified time: 2019-04-23 14:57:02
+# @Last Modified time: 2019-04-23 17:23:44
 
 # import pymysql
 # import pandas as pd
@@ -23,7 +23,7 @@
 # print df
 
 
-#*****************测试数据库连接**********************************
+#*****************测试默认数据库连接********************************
 
 # from db import database
 
@@ -31,12 +31,21 @@
 # sql = "select * from t_stock_trade where F_STOCK_CODE=%s limit 100"
 # print db.fetch_all(sql,"000001")
 
-#*****************测试数据调取**********************************
-from api import DataAPI
+#*****************测试数据调取************************************
+# from api import DataAPI
 
-dp = DataAPI.DataAPI()
-print dp.get_mkt_equd()
+# dp = DataAPI.DataAPI()
 # print dp.get_mkt_equd("000001")
-# print dp.get_mkt_equd("000001",begin_date='20080101',end_date='20181228')
-# print dp.get_mkt_equd("000001",begin_date='20080101',end_date='20181228',field=["F_STOCK_STDCODE","F_CLOSE"])
+# print dp.get_mkt_equd("000001",begin_date='20180101',end_date='20181228')
+# print dp.get_mkt_equd("000001",begin_date='20180101',end_date='20181228',field=["F_STOCK_STDCODE","F_CLOSE"])
 # df = dp.get_mkt_equd("000001",adj='hfq')
+
+#******************测试指标计算**********************************
+
+# from util import indictor
+# from api import DataAPI
+
+# dp = DataAPI.DataAPI()
+# df = dp.get_mkt_equd('000001',field=["F_STOCK_STDCODE","F_CLOSE"])
+# rsi1,rsi2,rsi3 = indictor.RSI(df["F_CLOSE"])
+# print rsi1

@@ -2,12 +2,14 @@
 # @Author: jiangfeng
 # @Date:   2019-01-17 10:16:45
 # @Last Modified by:   jiangfeng
-# @Last Modified time: 2019-04-23 15:39:23
+# @Last Modified time: 2019-04-23 17:09:32
+import sys
+sys.path.append("..")
 
 import pandas as pd
 import numpy as np
 from datetime import datetime
-from jfstock.db import database
+from db import database
 import confvar as cv
 
 db = database.database()
@@ -72,6 +74,7 @@ class DataAPI(object):
 
 		stockcode = df["F_STOCK_STDCODE"]		
 		df = df.convert_objects(convert_numeric=True).round(2)
+		# df = pd.to_numeric(df,downcast='float')
 		df["F_STOCK_STDCODE"] = stockcode
 		
 		return df.loc[:,field]
